@@ -23,4 +23,12 @@ public class Student extends Person{
                 ". " + getName() +
                 ' ' + getSurname();
     }
+
+    public double getPaymentAmount() {
+        if (gpa > 2.67) {
+            return 36600;
+        } else {
+            return 0;
+        }
+    }
 }

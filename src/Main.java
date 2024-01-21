@@ -14,7 +14,7 @@ public class Main {
     public static void printData(Iterable<Person> array) {
         Comparator<Person> incomeComparator = Comparator.comparingDouble(Person::getPaymentAmount);
         ArrayList<Person> sortedArray = new ArrayList<Person>((Collection) array);
-        Collections.sort(sortedArray, incomeComparator);
+        sortedArray.sort(incomeComparator);
         for (Person person : sortedArray) {
             System.out.println(person.toString() + " earns " + person.getPaymentAmount());
         }

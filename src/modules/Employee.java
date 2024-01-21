@@ -32,4 +32,7 @@ public class Employee extends Person{
                 ". " + getName() +
                 ' ' + getSurname();
     }
+    public double getPaymentAmount() {
+        return salary;
+    }
 }

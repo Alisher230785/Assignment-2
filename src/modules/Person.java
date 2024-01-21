@@ -1,8 +1,8 @@
 package modules;
 
-public class Person implements Payable{
+public abstract class Person implements Payable{
     private static int id_gen = 1;
-    private int id;
+    private final int id;
     private String name;
     private String surname;
     public Person() {
@@ -36,19 +36,5 @@ public class Person implements Payable{
     public String toString() {
         return id + ". " + name + ' ' + surname;
     }
-    public double getPaymentAmount() {
-        if (this instanceof Student student) {
-            if (student.getGpa() > 2.67) {
-                return 36600;
-            } else {
-                return 0;
-            }
-        }
-        else if (this instanceof Employee employee) {
-            return employee.getSalary();
-        }
-        else {
-            return 0;
-        }
-    }
+    public abstract double getPaymentAmount();
 }
