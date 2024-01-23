@@ -5,6 +5,7 @@ public abstract class Person implements Payable{
     private final int id;
     private String name;
     private String surname;
+    // constructors
     public Person() {
         id = id_gen++;
     }
@@ -13,7 +14,7 @@ public abstract class Person implements Payable{
         this.name = name;
         this.surname = surname;
     }
-
+    // getters and setters
     public int getId() {
         return id;
     }
@@ -36,5 +37,5 @@ public abstract class Person implements Payable{
     public String toString() {
         return id + ". " + name + ' ' + surname;
     }
-    public abstract double getPaymentAmount();
+    public abstract double getPaymentAmount(); // making method abstract
 }

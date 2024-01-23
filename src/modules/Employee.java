@@ -3,7 +3,7 @@ package modules;
 public class Employee extends Person{
     private String position;
     private double salary;
-
+    // constructors
     public Employee() {
         super();
     }
@@ -12,6 +12,7 @@ public class Employee extends Person{
         this.position = position;
         this.salary = salary;
     }
+    // getter and setter
     public String getPosition() {
         return position;
     }
@@ -32,6 +33,7 @@ public class Employee extends Person{
                 ". " + getName() +
                 ' ' + getSurname();
     }
+    // implementing abstract method for employee
     public double getPaymentAmount() {
         return salary;
     }

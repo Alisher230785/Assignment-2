@@ -2,7 +2,7 @@ package modules;
 
 public class Student extends Person{
     private double gpa;
-
+    // constructors
     public Student() {
         super();
     }
@@ -10,6 +10,7 @@ public class Student extends Person{
         super(name,surname);
         this.gpa = gpa;
     }
+    // getter and setter
     public double getGpa() {
         return gpa;
     }
@@ -23,7 +24,7 @@ public class Student extends Person{
                 ". " + getName() +
                 ' ' + getSurname();
     }
-
+    // implementing an abstract method for student
     public double getPaymentAmount() {
         if (gpa > 2.67) {
             return 36600;
